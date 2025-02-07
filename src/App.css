@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   background-color: #131314;
   color: white;
@@ -8,109 +9,62 @@ body {
   justify-content: center;
 }
 
+/* Main Container */
 .container {
   text-align: center;
-  max-width: 900px;
+  max-width: 90%;
+  width: 900px;
   position: relative;
+  padding: 20px;
 }
 
 /* Hamburger Menu */
-.hamburger {
-  position: relative;
+/* .hamburger {
   font-size: 24px;
   cursor: pointer;
   color: #6ec1e4;
-  left: -700px;
-  margin-top: 30px;
-}
+  margin: 20px auto;
+} */
 
+/* Title */
 .title {
   color: #6ec1e4;
-  font-size: 32px;
-  margin-bottom: 0px;
-  margin-top: 20px;
+  font-size: 28px;
+  margin: 20px 0;
 }
 
+/* Cards Section */
 .cards-container {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
-.card {
-  /* background-color: #282828; */
-  background-color:#1F2235;
-  width: 270px;
-  height: 160px;
+/* Individual Cards */
+.card, .card1 {
+  background-color: #1F2235;
+  width: 280px;
+  height: 200px;
   border-radius: 12px;
-  padding: 15px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50PX;
-}
-.chrome-button1 {
-  background-color: #6ec1e4;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
   text-align: center;
 }
-.className{
-  padding-bottom: 20px;
-}
-.card1 {
-  /* background-color: #282828; */
-  background-color:#1F2235;
-  margin-top: 50PX;
-  width: 430px;
-  height: 160px;
-  border-radius: 12px;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-.icon {
+/* Icons */
+.icon, .icon1 {
   width: 70px;
   height: 70px;
   margin-bottom: 10px;
-  /* mix-blend-mode: multiply; */
-  mix-blend-mode: screen;
   filter: invert(2);
 }
 
-.card-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.card-text {
-  font-size: 20px;
-  color: #ccc;
-  padding-right: 180px;
-  letter-spacing: 1px;
-  position: absolute;
-  margin-bottom: 70px;
-}
-
-.icon1 {
-  width: 120px;
-  height: 120px;
-  margin-top: px;
-  margin-left: 240px;
-  mix-blend-mode: multiply;
-  mix-blend-mode: screen;
-  filter: invert(2);
-}
-.chrome-button2 {
+/* Card Button */
+.chrome-button1, .chrome-button2, .chrome-button3 {
   background-color: #6ec1e4;
   border: none;
   padding: 10px 15px;
@@ -118,45 +72,78 @@ body {
   color: black;
   font-weight: bold;
   cursor: pointer;
-  margin-right: 170px;
 }
+
+/* Chrome Extension Section */
 .chrome-card {
-  background-color:#1F2235;
-  width: 750px;
-  height: 230px;
-  margin-top: 40px;
+  background-color: #1F2235;
+  width: 100%;
+  max-width: 750px;
+  margin: 40px auto;
   border-radius: 12px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   padding: 20px;
-}
-.chrome-icon {
-  width: 350px;
-  height: 250px;
-  margin-right: 20px;
-  padding-left: 40px;
-  mix-blend-mode: multiply;
-}
-
-.chrome-content {
   text-align: left;
 }
 
-.chrome-text {
-  font-size: 20px;
-  color: #ccc;
-  margin-bottom: 50px;
-  padding-left: 50px;
-  letter-spacing: 1px;
+.chrome-icon {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  padding-left: 20px;
 }
 
-/* .chrome-button3 {
-  background-color: #6ec1e4;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  color: black;
-  font-weight: bold;
-  margin-left: 80px;
-  cursor: pointer;
-} */
+/* Chrome Text */
+.chrome-text {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card, .card1 {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .chrome-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .chrome-icon {
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .chrome-text {
+    font-size: 16px;
+  }
+
+  .chrome-button1, .chrome-button2, .chrome-button3 {
+    width: 100%;
+  }
+}
